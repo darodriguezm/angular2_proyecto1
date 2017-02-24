@@ -1,0 +1,16 @@
+<h1>
+  {{title}}
+</h1>  
+<div>
+    <tag-tarea *ngFor ="let tarea of arrTareas; let i = index; trackBy: trackByFn" [valTarea]="tarea" [itemDelete]="i" (deleteItem)="delTarea($event)">
+    </tag-tarea>
+</div>
+<p *ngIf="cantItems==0">There is no items in the list!</p>
+
+<hr>
+<input #txtTarea type="text" name="txtTarea" placeholder="tarea a agregar {{i}}" required/>
+<input type="button" name="btnAddTarea" value="add" (click)="addTarea(txtTarea.value);txtTarea.value=''"
+       class="btn btn-primary" tooltip="Presione el botón para agregar un nuevo ítem a la lista"/>
+<alert type="success">
+    <strong>Registros Totales: </strong>{{cantItems}}
+</alert>

@@ -1,0 +1,5 @@
+<div>
+  <span>Tachar: <input #chkBox type="checkbox" [(ngModel)]="valTarea.selected"/></span>
+  <span><input type="button" value="Delete" (click)="lanzarDelItem($event)" /></span>
+  <span [class.normal]="valTarea.selected==false" [class.tached]="valTarea.selected==true">{{valTarea.value}}</span>
+</div>

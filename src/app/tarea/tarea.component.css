@@ -1,0 +1,21 @@
+.normal {
+    color: black;
+}
+
+.tached {
+    color: blue;
+    text-decoration: line-through;
+}
+
+div {
+    text-align: left;
+    display: block;
+    margin: 10px auto;
+    width: 800px;
+    border: 1px #CCCCCC solid;
+    padding-left: 10px;
+}
+
+span{
+    margin: auto 20px;
+}
